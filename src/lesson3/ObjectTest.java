@@ -53,10 +53,36 @@ public class ObjectTest extends java.lang.Object {
 		int[]	values = new int[] {5,-2,18,0,66};
 		
 		int sum = 0;
+		// int value;
+		//
+		// for (int i=0; i < values.length; i++ ) {
+		//   value = values[i];
 		for (int value : values) {
 			sum += value;
 		}
+		// }
 		System.err.println("Sum="+sum);
+		
+		int minValue = values[0];
+		
+//		for (int i = 1; i < values.length; i++) {
+//			if (values[i] > minValue) {
+//				minValue = values[i]; 
+//			}
+//		}
+//		for (int value : values) {
+//			if (value > minValue) {
+//				minValue = value; 
+//			}
+//		}
+		for (int value : values) {
+			minValue = /*java.lang.*/Math.max(value,minValue); 
+		}
+		
+		
+		System.err.println("Max="+minValue);
+		
+		
 	}
 
 }
