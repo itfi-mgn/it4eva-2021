@@ -12,8 +12,13 @@ public class InterfaceTest implements MyInterface {
 	}
 
 	public static void callPrint(/*InterfaceTest*/MyInterface it) {
-		it.print();
-		it.callNewMethod();
+		if (it == null) {
+			throw new NullPointerException("MyINterface instance can't be null"); 
+		}
+		else {
+			it.print();
+			it.callNewMethod();
+		}
 	}
 }
 
