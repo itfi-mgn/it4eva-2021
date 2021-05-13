@@ -62,6 +62,22 @@ public class StringTest {
 		System.err.println("Empty: "+re.isEmpty());
 		System.err.println("Trim: {"+re.trim()+"}");
 		
+		switch (vassya/*.hashCode()*/) {
+			case "vassyA"/*.hashCode()*/ :
+				// if (vassya.equals("vassyA")) {
+				System.err.println("--- 1 ---");
+				// }
+				break;
+			case "petr"/*.hashCode()*/ :
+				// if (vassya.equals("petr")) {
+				System.err.println("--- 2 ---");
+				// }
+				break;
+			default :
+				System.err.println("--- 3 ---");
+				break;
+		}
+		
 	}
 
 }
