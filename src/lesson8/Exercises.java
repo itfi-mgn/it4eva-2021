@@ -36,6 +36,26 @@ public class Exercises {
 			meop.append(reverse(line)).append('\n');
 		}		
 		System.err.println("MEOP: "+meop);
+		
+		
+		int a = Integer.valueOf("-125");
+
+		String	sum = "12+66+3+1+907";
+		// sum ? 
+		int isum = 0;
+		for (String add : sum.split("\\+")) {
+			isum += Integer.valueOf(add);
+		}
+		System.err.println("Isum="+isum);
+		
+		String	sum2 = "12+66-5+1-907";
+		
+		int isum2 = 0;
+		for (String add : sum2.replace("-", "+-").split("\\+")) {
+			isum2 += Integer.valueOf(add);
+		}
+		System.err.println("Isum2="+isum2);
+		
 	}
 	
 	private static String reverse(String source) {
