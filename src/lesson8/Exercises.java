@@ -30,7 +30,21 @@ public class Exercises {
 				"Лихо гонит тучи ветер,\n" + 
 				"Дольше дождик бьётся оземь.\n" + 
 				"«Больше влаги», — просит озимь.";
-				
+	
+		StringBuilder meop = new StringBuilder();
+		for (String line : poem.split("\n")) {
+			meop.append(reverse(line)).append('\n');
+		}		
+		System.err.println("MEOP: "+meop);
 	}
-
+	
+	private static String reverse(String source) {
+		final StringBuilder	result = new StringBuilder();
+		final String[] words = source.split(" ");
+		
+		for (int index = words.length-1; index >= 0; index--) {
+			result.append(words[index]).append(' ');
+		}
+		return result.toString();
+	}
 }
