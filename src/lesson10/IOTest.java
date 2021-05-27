@@ -30,7 +30,7 @@ public class IOTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		 
 		try (OutputStream	os = new FileOutputStream("c:/temp/yyy.txt");
 			PrintWriter		ps = new PrintWriter(os)) {
 			
